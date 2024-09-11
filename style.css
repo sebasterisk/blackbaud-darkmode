@@ -1,0 +1,562 @@
+/* 
+    blackbaud dark mode
+    11 sep 2024
+    //github.com/sebasterisk
+*/
+
+/* sky api defaults */
+:root{
+	--sky-background-color-page-default: #222831;
+	--sky-background-color-neutral-light: #31363F;
+	--sky-text-color-default: #eee;
+	--sky-background-color-input-selected: #2E4D80;
+	--sky-highlight-color-info: #365d9c;
+	--sky-text-color-deemphasized: #ccc
+}
+
+.sky-theme-modern{
+	--sky-background-color-page-default: #222831;
+	--sky-background-color-neutral-light: #31363F;
+	--sky-text-color-default: #eee;
+	--sky-background-color-input-selected: #2E4D80;
+	--sky-highlight-color-info: #365d9c;
+	--sky-text-color-deemphasized: #ccc
+}
+
+/* body */
+body{
+	background-color: #222831 !important;
+	color: #eee;
+}
+
+/* extra text classes */
+.bb-emphasized {
+	color: #eee;
+}
+/* upper third */
+.sec-15-bgc{
+	background-color: #1f2229 !important;
+	border-color: #eee !important;
+	border: none !important;
+}
+.sec-50-bgc{
+	background-color: transparent !important
+}
+
+.subnavbar {
+	background-color: #222831 !important;
+	border: none !important;
+	.nav>.active>a{
+		color: #ccc;
+	}
+}
+
+/* active tab in upper third */	
+#site-nav ul.topnav > li > a.active, #site-nav ul.topnav > li > a:hover, .subnavbar .nav > .active > a, .subnavbar .nav > .active > a:hover {
+	border: none;
+	border-radius: 0 0 7px 7px ;
+	box-shadow: none;
+	*{
+		border: none;
+	}
+}
+
+/* hovering over bottom row element in upper third */	
+.subnavbar .nav>li>a:hover{
+	color: #eee !important;
+	transition: color 400ms;
+}
+
+/* keep upper third icons at 32px */	
+#site-nav ul.topnav>li>a{
+	padding: 0 14px;
+	img{
+		height: 32px;
+		margin: 12px 0 0 0;
+	}
+}
+
+#site-nav ul.topnav li.oneline a span.desc {
+	padding-left: 5px !important;
+}
+
+/* slightly increase size of top row */
+#site-nav ul.topnav{
+	height: 60px;
+}
+
+.subnavbar .nav>li>a {
+	margin-top: 0 !important;
+	padding-top: 13px;
+}
+
+/* upper third top row active */
+#site-nav ul.topnav > li > a.active, #site-nav ul.topnav > li > a:hover {
+	background-image: none;
+	background-color: #1a325b !important;
+}
+/* upper third bottom row active */
+.subnavbar .nav > .active > a, .subnavbar .nav > .active > a:hover {
+	background-image: none;
+	background-color: #1f2229 !important;
+}
+
+.desc{
+	color: #bbb;
+}
+
+/* custom upper third menu collapse-cascade animation
+forces no-wrap */
+#site-nav ul.topnav>li>a:not(.active, .group-page-link-1){
+	max-width: 48px;
+	transition: max-width 600ms 0ms, background-color 600ms;
+	overflow: clip !important;
+	white-space: nowrap;
+	.desc{
+		float: none;
+		display: inline-block;
+		text-wrap: nowrap;
+	}
+}
+
+#site-nav ul.topnav li a:not(.active):hover{
+	max-width: 200px;
+	transition: max-width 600ms 0ms ease-out, background-color 600ms;
+}
+
+#site-header-bottom{
+	background: transparent;
+}
+
+/* calendar icon */
+.topnav .dayicon{
+	margin-left: 0px;
+}
+
+/* fixes sitelogo margin wonkiness at certain window widths */
+@media (min-width: 980px) and (max-width: 1199px){
+	#site-logo.logoimg.sky-nav img {
+        margin-top: 0px;
+  }
+}
+
+/* select grade input */
+.well{
+	background-color: #31363F;
+	border: none;
+}
+
+/* subpage headers, i.e. class pages */
+.section-heading{
+	background-color: #1f2229;
+	*{
+		color: #eee;
+	}
+}
+
+.thumbnail{
+	background-color: #31363F;
+	border: none;
+}
+
+select{
+	background-color: #31363F;
+	border: 2px solid #3e434F;
+	border-radius: 5px;
+	color: #eee;
+}
+
+.input-sm{
+	border-radius: 5px;
+}
+
+/* tile header */
+.bb-tile .bb-tile-title{
+	background-color: #31363F;
+	color: #eee;
+	border-top: 4px solid #1f2229;
+	.bb-tile-header{
+		color: #eee;
+	}
+}
+
+/* tile header paddings for sidebar */
+.bb-tile .bb-tile-header-with-content .bb-tile-header {
+	padding-left: 15px !important;
+}
+
+/* tile content */
+.bb-tile .bb-tile-content, .sky-box{
+	background-color: #1f2229;
+	border: none;
+}
+
+.desc .pri-100-fgc{
+	color: #fff !important;
+}
+
+/* cards */
+.bb-card{
+	background-color: #1f2229;
+	border: 2px solid #3e434F;
+	box-shadow: none;
+}
+.bb-card-title{
+	color: #ccc;
+}
+bb-card-content>.row>div{
+	padding-top: 5px !important;
+}
+
+/* alternating rows in progress page */	
+#coursesContainer .row:nth-child(odd), #advisoryContainer .row:nth-child(odd), #activitiesContainer .row:nth-child(odd), #communitiesContainer .row:nth-child(odd){
+	background-color: #20242b !important;
+}
+
+/* hovering over rows in progress page */	
+#coursesContainer .row:hover, #advisoryContainer .row:hover, #activitiesContainer .row:hover, #communitiesContainer .row:hover{
+	background-color: #1f2229 !important;
+	background-image: linear-gradient(to right, #31395788, #222831FF);
+}
+
+h4, h5{
+	color: #bbb;
+}
+
+a{
+	color: 	#4682B4;
+}
+
+/* other tables */
+.table-striped>tbody>tr:nth-of-type(odd){
+	background-color: #20242b;
+}
+.table tbody tr td{
+	border-bottom: none;
+}
+.table thead{
+	background-color: #31363F;
+}
+.table thead tr th{
+	border-right: #1f2229;
+}
+/* input methods (buttons, forms, etc) */	
+.btn-default, .bb-btn-secondary, .chCal-state-default, .sky-btn-default, .sky-btn:not(.sky-btn-link-inline, .sky-btn-link, .sky-btn-primary), .sky-form-control, sky-input-box .sky-input-box-input-group-inner:not(.sky-field-status-active):not(.sky-field-status-invalid), ul.token-input-list, .form-control, .tox .tox-pop__dialog, .input-group .btn {
+	background-color: #31363F;
+	color: #eee;
+	border: 2px solid #3e434F;
+	border-radius: 3px;
+}
+/* side affect mitigation */
+.sky-btn-link, .sky-btn-link-inline{
+	color: var(--sky-text-color-action-primary);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* blackbaud's tox html editor */	
+.tox, .tox *:not(.tox .tox-insert-table-picker>div,
+.tox .tox-insert-table-picker .tox-insert-table-picker__selected){
+	border: none !important;
+}
+
+ul.token-input-list li input{
+	background-color: #31363F;
+}
+
+.tox .tox-toolbar-overlord, .tox .tox-toolbar, .tox .tox-toolbar__overflow, .tox .tox-toolbar__primary{
+	background-color: #3e434F ;
+}
+
+.tox .tox-tbtn svg{
+	fill: #eee	
+}
+
+
+.bb-btn-secondary:hover{
+	color: #333;
+	border: 2px solid #adadad;
+}
+
+.sky-switch:not(.sky-theme-modern *) .sky-switch-control{
+	background-color: #31363F ;
+	color: #eee;
+	border: 2px solid #3e434F ;
+}
+
+/* calendar page */	
+.chCal-state-default .chCal-button-inner{
+	background: none;
+	border: none;
+	color: #eee;
+}
+.chCal-state-default .chCal-button-effect span{
+	border: none;
+	background: none;
+}
+.chCal-state-disabled *{
+	color: #3e434F !important;
+}
+
+.cal-month-view{
+	background-color: #1f2229;
+}
+
+.whiteContainer1{
+	border: 2px solid #3e434F;
+	.popContainerStraight{
+		display: block;
+		background-color: #31363F;
+	color: #eee;
+	background-image: none;
+	box-shadow: none;
+	text-shadow: none;
+	border: 1px solid #31363F;
+	}
+}
+
+.containerFull.whiteContainer1{
+	border: 2px solid #3e434F;
+	display: block;
+	background-color: #31363F;
+	color: #eee;
+	background-image: none;
+	box-shadow: none;
+	text-shadow: none;
+	border: 1px solid #31363F;
+	p{
+		color: #ccc !important;
+	}
+}
+
+/* loading */	
+.sky-wait-mask, .sky-fixed-wait-mask{
+	background-color: #222831;
+}
+
+.sky-background-color-info-light{
+	background-color: #222831;
+	background-image: linear-gradient(to right, #31395788, #222831FF) !important;
+}
+
+/* new grade report assignment breakdown pane  */	
+.sky-flyout{
+	background-color: #31363F !important;
+	--sky-background-color-page-default: #1f2229 !important;
+}
+.ag-row{
+	color: #ccc !important;
+}
+.sky-flyout-header{
+	background-color: #1f2229 !important;
+}
+
+/* messages page */	
+.message-list-body{
+	color: #ccc;
+}
+
+.official-note-list tr{
+	border-bottom: 2px solid #3e434F;
+}
+
+.bb-check-checkbox, .bb-check-radio{
+	background-color: #31363F;
+	border: none;
+}
+
+/* assignment center */	
+/* filter list, left side */	
+.sky-split-view-workspace, .no-borders .sky-split-view-workspace{
+	background-color: #1f2229 !important;
+}
+app-student-assignment-center>div, .sky-split-view-drawer{
+	background-color: #222831 !important;
+}
+.sky-split-view-drawer {
+	border-right: none !important;
+}
+.sky-toolbar-container, .sky-split-view {
+	border: none !important;
+}
+sky-repeater-item .sky-repeater-item {
+  border-bottom: 2px solid #222831;
+}
+sky-repeater-item .sky-repeater-item.sky-repeater-item-active{
+	background-color: #222831;
+	background-image: linear-gradient(to right, #313957, #222831) !important;
+	color: #eee;
+	
+}
+/* per-assignment page */
+app-assignment-student-view{
+	display: block;
+	margin-top: 24px;
+}
+
+/* assignment cards on assignment center calendar */
+.cell-view-event{
+	overflow-x: scroll;
+	>div{
+		width: 100%;
+		min-width: 75px;
+	}
+}
+
+/* calendar */
+/* makes adjustments to fix pesky misalignment issues */
+.sky-toolbar-container, #calendar-date-container{
+	background-color: #31363F !important;
+	border: none;
+}
+.sky-border-bottom-dark{
+	border: none;
+}
+.calendar-headers:not(.cal-week-headers){
+	border: 1px solid #3e434F;
+	border-bottom: none;
+	border-right:none;
+}
+.calendar-headers.cal-week-headers{
+	border-left: 1px solid #3e434F;
+}
+.cal-header{
+	border: 1px solid #3e434F;
+	border-left: none;
+}
+.cal-header:last-child{
+	border-right: 1px solid #3e434F;
+}
+.cal-week-view{
+	background-color: #1f2229;
+}
+.cal-week-view .cal-day-column{
+	border-left-color: #3e434F;
+}
+
+.cal-week-view .cal-day-column:last-child{
+	border-right: 1px solid #3e434F;
+}
+
+.cal-week-view .cal-all-day-events, .cal-week-view .cal-time-events{
+	border-color: #3e434F;
+}
+.calendar-headers .calendar-header-day{
+	background-color: #31363F;
+}
+.calendar-week-header-day{
+	border-color: #3e434F;
+}
+.cal-month-view .cal-day-cell:not(:last-child), .cal-month-view .cal-days .cal-cell-row, .cal-month-view .cal-days {
+	border-color: #3e434F !important
+}
+.cal-month-view .cal-cell{
+	width: calc(100%/7);
+}
+.cal-month-view .cal-cell-row .cal-cell:hover{
+	background-color: #3e434F;
+}
+.cal-month-view .cal-cell-row:hover{
+	background-color: #222831;
+}
+
+.container, #edu-layout-full-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+sky-repeater-item .sky-repeater-item-title {
+	color: #efefef;
+}
+
+/* force sky ui pages to have same margins as other pages */	
+@media(min-width: 768px) {
+    .container, #edu-layout-full-container {
+        width:750px
+    }
+}
+
+@media(min-width: 992px) {
+    .container, #edu-layout-full-container {
+        width:970px
+    }
+}
+
+@media(min-width: 1200px) {
+    .container, #edu-layout-full-container {
+        width:1170px
+    }
+}
+
+/* schedule pages */	
+#schedule-maker-bulletin .emergency-bulletin-container, #emergency-bulletin .emergency-bulletin-container, #main-bulletin .main-bulletin-container{
+	background-color: #2f2013;
+	border: none !important;
+}
+
+/* softens the shadows */
+.sky-shadow{
+	box-shadow: 0 0 20px #0008;
+}
+.sky-dropdown-menu{
+	background-color: #1f2229;
+}
+.sky-dropdown-item>a, .sky-dropdown-item>button{
+	color: #ccc;
+}
+
+/* active or hovered dropdown elements */
+.sky-dropdown-item.sky-dropdown-item-active a, .sky-dropdown-item.sky-dropdown-item-active button, .sky-dropdown-item:hover a, .sky-dropdown-item:hover button{
+	background-color: #1f2229 !important;
+	background-image: linear-gradient(to right, #31395788, #222831FF) !important;
+}
+
+/* active or primary btns */
+.sky-switch:not(.sky-theme-modern *) .sky-switch-input:checked:not(:disabled)+.sky-switch-control, .sky-switch:not(.sky-theme-modern *) .sky-switch-input[type=checkbox]:indeterminate:not(:disabled)+.sky-switch-control, .btn-approve.active, .sky-btn-primary, .sky-btn.sky-btn-disabled, .sky-btn[disabled], .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open>.btn-default.dropdown-toggle {
+  background-color: var(--sky-background-color-input-selected);
+  border-color: var(--sky-highlight-color-info);
+  border-width: 2px;
+  box-shadow: none;
+  color: #eee;
+}
+
+.btn-default:hover{
+	border: 2px solid;
+	border-color: var(--sky-highlight-color-info);
+	background-color: #31363F;
+	color: #eee;
+	border-radius: 3px;
+}
+
+/* date pickers */
+.sky-datepicker-calendar-inner{
+	background-color: #1f2229;
+	border: none;
+	*{
+		border: none;
+	}
+}
+
+/* modals */
+.sky-modal-header, .sky-modal-footer-container, .modal-header, .modal-footer{
+	background-color: #31363F !important;
+}
+
+.sky-modal-content, .modal-content{
+	background-color: #1f2229 !important;
+}
+
+.sky-modal, .sky-modal-header, .sky-modal-footer-container, .modal-header, .modal-footer{
+	border: none !important;
+}
+
+/* quiz results */
+.question-tile{
+	background-color: #222831 !important;
+	border-left: none !important;
+	border-right: none !important;
+	border-bottom: none !important;
+	color: #ccc;
+}
