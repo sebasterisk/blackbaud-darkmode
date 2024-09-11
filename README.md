@@ -7,6 +7,6 @@ implements darkmode, fixes irksome alignment issues, redesigns upper third, and 
 
 use an extension that can inject css into websites.
 
-!(/demo-imgs/demo-1.png)
+![](/demo-imgs/demo-1.png)
 
-!(/demo-imgs/demo-2.png)
+![](/demo-imgs/demo-2.png)
