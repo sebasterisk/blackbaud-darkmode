@@ -221,6 +221,25 @@ bb-card-content>.row>div{
 	padding-top: 5px !important;
 }
 
+/* topics page */
+#academicclassmaincontainer .row>.col-md-3>div, #activitypagecontainer .row>.col-md-3>div{
+	background-color: #1f2229 !important ;
+	.fadeBox{
+		background-color: #222831;
+		h6{
+			color: #ccc !important;
+		}
+	}
+} 
+
+.breadcrumb{
+	background-color: #1f2229 !important ;
+}
+
+.sortContainer>div{
+	background-color: #1f2229 !important ;
+}
+
 /* alternating rows in progress page */	
 #coursesContainer .row:nth-child(odd), #advisoryContainer .row:nth-child(odd), #activitiesContainer .row:nth-child(odd), #communitiesContainer .row:nth-child(odd){
 	background-color: #20242b !important;
@@ -378,6 +397,21 @@ ul.token-input-list li input{
 	border: none;
 }
 
+/* message detail */
+.modal-body-tiled, .bb-modal-body-tiled{
+	background-color: #222831;
+	box-shadow: 0 -10px 10px #0004 inset;
+}
+
+.modal-body .bb-tile .bb-tile-title .bb-tile-header{
+	color: #ccc;
+}
+
+.message-list div.well.fromother{
+	background-color: #31363F ;
+}
+
+
 /* assignment center */	
 /* filter list, left side */	
 .sky-split-view-workspace, .no-borders .sky-split-view-workspace{
@@ -415,6 +449,7 @@ app-assignment-student-view{
 		min-width: 75px;
 	}
 }
+
 
 /* calendar */
 /* makes adjustments to fix pesky misalignment issues */
@@ -511,7 +546,7 @@ sky-repeater-item .sky-repeater-item-title {
 
 /* softens the shadows */
 .sky-shadow{
-	box-shadow: 0 0 20px #0008;
+	box-shadow: 0 0 10px #0004;
 }
 .sky-dropdown-menu{
 	background-color: #1f2229;
@@ -563,6 +598,15 @@ sky-repeater-item .sky-repeater-item-title {
 
 .sky-modal, .sky-modal-header, .sky-modal-footer-container, .modal-header, .modal-footer{
 	border: none !important;
+}
+
+.modal-header .bb-dialog-header{
+	color: #eee !important;
+}
+
+.modal-header a{
+	color: #fff !important;
+	text-shadow: none;
 }
 
 /* quiz results */
