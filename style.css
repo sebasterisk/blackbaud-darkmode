@@ -291,7 +291,7 @@ ul.token-input-list li input{
 	border: 2px solid #adadad;
 }
 
-.sky-switch:not(.sky-theme-modern *) .sky-switch-control{
+.sky-switch:not(.sky-theme-modern *) .sky-switch-control, .sky-theme-modern .sky-switch .sky-switch-control{
 	background-color: #31363F ;
 	color: #eee;
 	border: 2px solid #3e434F ;
@@ -446,11 +446,43 @@ app-assignment-student-view{
 .cal-week-view .cal-day-column{
 	border-left-color: #3e434F;
 }
-
+.cell-view-event, .cal-week-view .cal-all-day-events .cal-event {
+	padding: 5px;
+	margin: 0 5px 5px;
+}
 .cal-week-view .cal-day-column:last-child{
 	border-right: 1px solid #3e434F;
 }
-
+.calendar-assignments-no-class .cal-week-view .cal-all-day-events .cal-event {
+	height: 120px;
+}
+.calendar-assignments-no-class .cal-week-view .cal-all-day-events .cal-events-row{
+	height: 124px;
+}
+.cal-week-view .cal-all-day-events .cal-event-container{
+	position: absolute;
+}
+.calendar-assignments-no-class mwl-calendar-week-view-event .sky-font-body-sm, app-assignment-status-display span, .cell-view-event.month-event .sky-font-body-sm{
+	font-size: 14px ;
+	color: #222831;
+}
+.calendar-assignment-additional-info{
+	margin-bottom: 4px ;
+}
+.calendar-assignment-status-link{
+	height: fit-content;
+	overflow: visible;
+	white-space: nowrap;
+}
+.calendar-assignment-title{
+	height: 1em !important;
+	max-height: 60px !important;
+	overflow: scroll !important;
+}
+.calendar-assignment-additional-info{
+	height: 1em !important;
+	overflow: scroll !important;
+}
 .cal-week-view .cal-all-day-events, .cal-week-view .cal-time-events{
 	border-color: #3e434F;
 }
@@ -469,6 +501,7 @@ app-assignment-student-view{
 .cal-month-view .cal-cell-row .cal-cell:hover{
 	background-color: #3e434F;
 }
+
 .cal-month-view .cal-cell-row:hover{
 	background-color: #222831;
 }
@@ -566,10 +599,47 @@ sky-repeater-item .sky-repeater-item-title {
 }
 
 /* quiz results */
+
 .question-tile{
 	background-color: #222831 !important;
 	border-left: none !important;
 	border-right: none !important;
 	border-bottom: none !important;
 	color: #ccc;
+}
+
+.questions-together-container{
+	background-color: #222831 !important;
+}
+.sky-theme-modern .sky-box{
+	background-color: #31363F;
+}
+.sky-theme-modern .sky-elevation-1-bordered{
+	border: none;
+	box-shadow: none;
+}
+.question-number-label{
+	color: #eee !important;
+}
+.navigation-button{
+	color: #eee !important;
+}
+
+.essay-display-container{
+	background-color: #222831 !important;
+	border: none !important;
+}
+
+.sky-theme-modern .sky-switch .sky-switch-input:not(:disabled):checked+.sky-switch-control, .sky-theme-modern .sky-switch .sky-switch-input:not(:disabled)[type=checkbox]:indeterminate+.sky-switch-control, .sky-theme-modern .sky-switch .sky-switch-input:not(:disabled):hover+.sky-switch-control{
+	border-width: 2px !important;
+}
+.navigation-inner{
+	border-right: none !important;
+};
+.sky-modal-content:focus{
+	outline: none !important;
+}
+.sky-summary-action-bar, .sky-summary-action-bar-actions{
+	background-color: #31363F !important;
+	box-shadow: none !important;
 }
