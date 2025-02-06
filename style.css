@@ -22,6 +22,7 @@
 	--sky-background-color-page-default: #222831;
 	--sky-background-color-neutral-light: #31363F;
 	--sky-text-color-default: #eee;
+	--sky-color-text-default: #eee;
 	--sky-background-color-input-selected: #2E4D80;
 	--sky-highlight-color-info: #365d9c;
 	--sky-text-color-deemphasized: #ccc
@@ -31,6 +32,7 @@
 	--sky-background-color-page-default: #222831;
 	--sky-background-color-neutral-light: #31363F;
 	--sky-text-color-default: #eee;
+	--sky-color-text-default: #eee;
 	--sky-background-color-input-selected: #2E4D80;
 	--sky-highlight-color-info: #365d9c;
 	--sky-text-color-deemphasized: #ccc
@@ -489,10 +491,10 @@ app-assignment-student-view{
 	border-right: 1px solid #3e434F;
 }
 .calendar-assignments-no-class .cal-week-view .cal-all-day-events .cal-event {
-	height: 120px;
+	height: 140px;
 }
 .calendar-assignments-no-class .cal-week-view .cal-all-day-events .cal-events-row{
-	height: 124px;
+	height: 144px;
 }
 .cal-week-view .cal-all-day-events .cal-event-container{
 	position: absolute;
@@ -510,13 +512,24 @@ app-assignment-student-view{
 	white-space: nowrap;
 }
 .calendar-assignment-title{
-	height: 1em !important;
+	color: #4682B4;
+	height: 1.2em !important;
+	max-height: 60px !important;
+	overflow: hidden !important;
+	white-space: nowrap;
+	text-overflow: ellipsis !important;
+}
+.calendar-assignment-title:hover{
+	color: #4682B4;
+	height: fit-content !important;
 	max-height: 60px !important;
 	overflow: scroll !important;
+	white-space: pre-wrap;
 }
 .calendar-assignment-additional-info{
-	height: 1em !important;
-	overflow: scroll !important;
+	height: 3em !important;
+	overflow-y: scroll !important;
+	scrollbar-width: 1px;
 }
 .cal-week-view .cal-all-day-events, .cal-week-view .cal-time-events{
 	border-color: #3e434F;
